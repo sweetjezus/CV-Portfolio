@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Francisco Oliveira</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#exper">Experience</a></li>
+                <!--<li><a href="#projects">Projects</a></li>-->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Francisco Oliveira</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#exper" onclick="toggleMenu()">Experience</a></li>
+                <!--<li><a href="#projects" onclick="toggleMenu()">Projects</a></li>-->
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="hero">
+        <div class="section__text">
+            <p class="section__text__p1">Hello there! I'm</p>
+            <h1 class="title">Francisco Oliveira</h1>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./pdf/CVFranciscoOliveira.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./img/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/franciscojmoliveira/'">
+                <img src="./img/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/sweetjezus'">
+            </div>
+        </div>
+        <div class="section__pic-container blob">
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get to Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img 
+                        src="./img/profile2.svg"
+                        alt="Profile picture"
+                        class="about-pic"
+                    />
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img 
+                                    src="./img/education.png" 
+                                    alt="Education icon" 
+                                    class="icon"
+                        />
+                        <h3>Education</h3>
+                        <p>Degree in Informatics Engineering at IPB<br>10/2016 - 9/2022</p>
+                    </div>
+                    <div class="details-container">
+                        <img 
+                                    src="./img/experience.png" 
+                                    alt="Experience icon" 
+                                    class="icon"
+                        />
+                        <h3>Experience</h3>
+                        <p>Final Project of Bachelor's<br></p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Hello there! I'm Francisco Oliveira, a recent graduate in Informatics Engineering 
+                        from IPB (Instituto Politécnico de Bragança). <br>Having earned my degree in 2022, 
+                        I am now eagerly seeking my first job opportunity in the tech industry. <br>
+                        I am excited to apply my skills and contribute to innovative projects. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./img/down-arrow.svg" alt="Arrow icon" class="icon arrow" onclick="location.href='./#exper'"/>
+    </section>
+    <section id="exper">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experiencedetails-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Programming Languages and Frameworks</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/HTML.svg" class="icon">
+                            <div>
+                                <h3>HTML</h3>
+                                
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/CSS.svg" class="icon">
+                            <div>
+                                <h3>CSS</h3>
+                                
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/JavaScript.svg" class="icon">
+                            <div>
+                                <h3>JavaScript</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg" class="icon">
+                            <div>
+                                <h3>SQL</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/PHP-Dark.svg" class="icon">
+                            <div>
+                                <h3>php</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Python-Dark.svg" class="icon">
+                            <div>
+                                <h3>Python</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Java-Dark.svg" class="icon">
+                            <div>
+                                <h3>Java</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/C.svg" class="icon">
+                            <div>
+                                <h3>C</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/CPP.svg" class="icon">
+                            <div>
+                                <h3>C++</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Bootstrap.svg" class="icon">
+                            <div>
+                                <h3>BootStrap</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/React-Dark.svg" class="icon">
+                            <div>
+                                <h3>React</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Angular-Dark.svg" class="icon">
+                            <div>
+                                <h3>Angular</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/ExpressJS-Dark.svg" class="icon">
+                            <div>
+                                <h3>Express</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/NodeJS-Dark.svg" class="icon">
+                            <div>
+                                <h3>Node.js</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Database Management Systems</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/MySQL-Dark.svg" class="icon">
+                            <div>
+                                <h3>MySQL</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://user-images.githubusercontent.com/4249331/52232852-e2c4f780-28bd-11e9-835d-1e3cf3e43888.png" class="icon">
+                            <div>
+                                <h3>Microsoft SQL Server</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Firebase-Dark.svg" class="icon">
+                            <div>
+                                <h3>Firebase</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="https://play-lh.googleusercontent.com/RC5WI7aIe9QcZv2rlR3fVeTlzg64n3mzmljAFJpsvVy8NeE2RcgjzlbzK4mjuqpezw" class="icon">
+                            <div>
+                                <h3>Oracle</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <img src="./img/down-arrow.svg" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+    </section>
+    <!--Projects Soon-->
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./img/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:francisco1998c@outlook.pt">francisco1998c@outlook.pt</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./img/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/franciscojmoliveira/">@franciscojmoliveira</a></p>
+          </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#exper">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2024 Francisco Oliveira. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
