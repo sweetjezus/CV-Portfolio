@@ -386,14 +386,18 @@ article .icon{
 }
 
 .collapsible-content-soft{
-  display:flex;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
   max-width: 50%;
   gap: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1.4s ease;
   cursor:default;
+}
+
+.collapsible-content-soft h3{
+  font-size: 1.2rem;
 }
 
 .collapsible-content p, .collapsible-content-soft p{
