@@ -339,28 +339,6 @@ section{
 
 }
 
-.experience-sub-title{
-  color: var(--text-color2);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.experience-details-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.article-container{
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: space-around;
-}
-
 article {
   display: flex;
   width: 8rem;
@@ -371,6 +349,76 @@ article {
 article .icon{
   cursor: default;
 }
+
+/*COLAPSSIBLE*/
+
+
+.collapsible{
+  max-width: 80%;
+  margin-top:2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #111;
+  cursor:pointer;
+  border-radius: 2rem;
+  border: rgb(0, 0, 0) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: var(--background-color);
+  margin: 2rem auto;
+  padding: 1rem;
+  
+}
+
+.collapsible-title {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible-content{
+  margin-top: 1rem;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+  cursor:default;
+}
+
+.collapsible-content-soft{
+  display:flex;
+  align-items: flex-start;
+  max-width: 50%;
+  gap: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+  cursor:default;
+}
+
+.collapsible-content p, .collapsible-content-soft p{
+  margin-top: 1rem;
+  font-size: .9rem;
+}
+
+.collapsible.active .collapsible-content{
+  max-height: 100vh;
+  animation: fade 1s ease-in-out;
+}
+
+.collapsible.active .collapsible-content-soft{
+  max-height: 100vh;
+  animation: fade 1s ease-in-out;
+}
+
+.collapsible.active svg{
+  transform: rotate(180deg);
+}
+
+svg{
+  transition: transform 0.5s ease-in;
+}
+
 
 /*PROJECTS SOON*/
 
@@ -424,5 +472,4 @@ footer {
 footer p {
   text-align: center;
 }
-
 
