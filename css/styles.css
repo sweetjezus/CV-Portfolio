@@ -1,20 +1,56 @@
 :root{
   --background-color: #fff;
   --text-color: #111;
-  --text-color2: #555555; /*dfa8df*/
+  --text-color2: #555555; /*dfa8df rgb(171,171,171)*/
   --hover-color: #555555;
-  --cor: rgba(1,1,1,0.5);
+  --cor: rgba(128, 0, 128, 0.5);
+  --btn-1color:purple;
+
+  --foreground: #111;
+  --background: #fff;
 }
+
+/*darkmode variables and button*/
+.darkmode {
+  --background-color: #111;
+  --text-color: #fff;
+  --text-color2: rgb(171,171,171); /*dfa8df rgb(171,171,171)*/
+  --hover-color: rgb(171,171,171);
+  --cor: rgba(128, 0, 128, 0.5);
+  --btn-1color:purple;
+  --foreground: #fff;
+  --background: #111;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+
+/* ----------------*/
 
 *{
   margin:0;
   padding:0;
 }
 
+
+
 body{
   font-family: "Oxanium", sans-serif;
   background-color: var(--background-color);
-  color: var(--text-color);
+  columns: var(--text-color);
 }
 
 html{
@@ -48,24 +84,28 @@ nav{
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  
 }
 
 a{
   color: var(--text-color);
   text-decoration: none;
-  text-decoration: white;
+  text-decoration: var(--text-color);
 }
 
 a:hover{
-  color: var(--hover-color);
+  color: var(--btn-1color);
   text-decoration: underline;
   text-underline-offset: 0.6rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--btn-1color);
 }
 
 .logo{
   font-size: 2rem;
+  color: var(--text-color);
 }
+
+h3{color: var(--text-color);}
 
 .logo:hover{
   cursor: default;
@@ -94,7 +134,7 @@ a:hover{
 .hamburger-icon span{
   width: 100%;
   height: 2px;
-  background-color: #111;
+  background-color: var(--text-color);
   transition: all 0.3 ease-in-out;
 }
 
@@ -102,7 +142,7 @@ a:hover{
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--background-color);
   width: fit-content;
   max-height: 0%;
   overflow: hidden;
@@ -208,6 +248,7 @@ section{
 .title{
   font-size: 3rem;
   text-align: center;
+  color: var(--text-color);
 
 }
 
@@ -223,6 +264,7 @@ section{
   height: 2rem;
 }
 
+
 /* Buttons */
 .btn-container {
   display: flex;
@@ -230,45 +272,124 @@ section{
   gap: 1rem;
 }
 
-.btn {
-  font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
-  border-radius: 2rem;
-}
-
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
+#hero a {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1rem;
+  margin: 40px 0;
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
   cursor: pointer;
+  font-weight: 600;
+  width: 8rem;
+  border-radius: 12px;
+
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
+#hero a:hover {
+  background: var(--btn-1color);
   color: white;
+  box-shadow: 0 0 5px var(--btn-1color),
+      0 0 25px var(--btn-1color),
+      0 0 50px var(--btn-1color),
+      0 0 200px var(--btn-1color);
+  
 }
 
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
+#hero a span {
+  position: absolute;
+  display: block;
 }
 
-.btn-color-2 {
-  background: none;
+#hero a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, transparent, var(--btn-1color));
+  animation: animate1 1s linear infinite;
 }
 
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+@keyframes animate1 {
+  0% {
+      left: -100%;
+  }
+
+  50%,
+  100% {
+      left: 100%;
+  }
 }
 
-.btn-container {
-  gap: 1rem;
+#hero a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--btn-1color));
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;border-radius: 8px;
 }
+
+@keyframes animate2 {
+  0% {
+      top: -100%;
+  }
+
+  50%,
+  100% {
+      top: 100%;
+  }
+}
+
+#hero a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--btn-1color));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+  0% {
+      right: -100%;
+  }
+
+  50%,
+  100% {
+      right: 100%;
+  }
+}
+
+
+#hero a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--btn-1color));
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+      bottom: -100%;
+  }
+
+  50%,
+  100% {
+      bottom: 100%;
+  }
+}
+
 
 
 /*Profile picture*/
@@ -306,6 +427,7 @@ section{
 
 .about-pic {
   border-radius: 2rem;
+  fill: var(--text-color);
 }
 
 .details-container {
@@ -476,4 +598,22 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/*ICONS FILL & STROKE*/
+.icon-fill{
+  fill:var(--text-color);
+}
+
+.icon-stroke{
+  stroke: var(--text-color);
+}
+
+/*DARK + LIGHT THEME*/
 
