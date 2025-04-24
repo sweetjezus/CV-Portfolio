@@ -3,499 +3,291 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My CV</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/mediaqueries.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet" />
+
+    <title>FO Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
   </head>
   <body>
-    <div id="theme">
-      <button id="dark-mode-toggle" class="dark-mode-toggle">
-        <svg
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 496 496">
-          <path
-            fill="currentColor"
-            d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
-            transform="translate(-8 -8)" />
-        </svg>
-      </button>
-    </div>
-
-    <nav id="desktop-nav">
-      <div class="logo">FO</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#exper">Skills</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">FO</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#exper" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Work</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-
-    <!--HERO SECTION-->
-    <section id="hero">
-      <div class="section__pic-container blob"></div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello there! I'm</p>
-        <h1 class="title">Francisco Oliveira</h1>
-        <div class="btn-container">
-          <a onclick="window.open('./pdf/CVFranciscoOliveira.pdf')">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Download CV
-          </a>
-          <a onclick="location.href='./#contact'">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Contact Info
-          </a>
-
-          <!--<button class="btn btn-color-2" onclick="window.open('./pdf/CVFranciscoOliveira.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>-->
-        </div>
-        <div id="socials-container">
-          <svg
-            class="icon icon-fill"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            onclick="location.href='https://www.linkedin.com/in/franciscojmoliveira/'">
-            <path
-              d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" />
-            <path
-              d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" />
-            <path
-              d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" />
-          </svg>
-          <svg
-            class="icon icon-fill"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            onclick="location.href='https://github.com/sweetjezus'">
-            <path
-              d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" />
-            <path
-              d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" />
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!--ABOUT SECTION-->
-    <section id="about">
-      <p class="section__text__p1">Get to Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <svg
-            class="about-pic"
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 256 170"
-            xml:space="preserve">
-            <path
-              d="M127.7,34.7c0,17.9-14.5,32.4-32.4,32.4C77.5,67,63,52.5,63,34.7C63,16.8,77.5,2.3,95.3,2.3c2.1,0,4.3,0.2,6.3,0.6L94,19.2
-	                    c-0.3,0-0.6,0-1,0c-7.6,0-13.8,6.2-13.8,13.8c0,7.6,6.2,13.8,13.8,13.8c7.6,0,13.8-6.2,13.8-13.8c0-3.7-1.5-7.1-3.9-9.6l8-17.1
-	                    C120.9,11.8,127.7,22.4,127.7,34.7z M254,147.9h-23.3c4.9-1.4,9.1-4.6,12-8.9c4-6.2,4.6-13.8,1.6-20.5l-24.8-55.5l-11.3-4.3
-	                    l15.2-52.1l-14.9-4.3l-32.2,110.6l14.9,4.3l13.5-46.3l5.4,2l22.7,50.7c1.3,2.8,1,5.9-0.7,8.5c-1.7,2.6-4.4,4.1-7.5,4.1H191v11.8
-	                    h-31.5c-0.3-11.1-9-19.7-19.7-19.7H96.5c0,0-19.2-50.5-19.6-51.3c-4-10.5-12.9-18.1-24.4-18.1c-14.7,0-25.9,12.2-33.9,29.8
-	                    C7.9,112.2,2.1,140.4,2,167.8l252-0.1V147.9z" />
-          </svg>
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <svg
-                class="icon contact-icon icon-stroke"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7.54004 11.77L12 14L19 10.5M7.54004 11.77V17.77M7.54004 11.77L12 9.54004M7.54004 11.77L5 10.5M7.54004 17.77V21M7.54004 17.77L12 20L19 16.5V10.5M7.54004 17.77L5 16.5V10.5M19 10.5L22 9L12 4L2 9L5 10.5"
-                  stroke-width="2"
+    <div class="main-container">
+      <nav class="navbar">
+        <div class="navbar__logo">FO</div>
+        <div class="navbar__menu">
+          <ul>
+            <li class="nav__item active">
+              <a href="#hero">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-
-              <h3>Education</h3>
-              <p>
-                Degree in Informatics Engineering at IPB<br />10/2016 - 9/2022
-              </p>
-            </div>
-            <div class="details-container">
-              <svg
-                class="icon contact-icon icon-stroke"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4 12H3V8C3 6.89543 3.89543 6 5 6H9M4 12V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V12M4 12H10M20 12H21V8C21 6.89543 20.1046 6 19 6H15M20 12H14M14 12V10H10V12M14 12V14H10V12M9 6V5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V6M9 6H15"
-                  stroke-width="2"
+                  stroke-linejoin="round"
+                  class="lucide lucide-house-icon lucide-house">
+                  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                  <path
+                    d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                </svg>
+                <span>Home</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#about">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <h3>Experience</h3>
-              <p>
-                Freelance Web Developer<br />
-                (made the website for RL3B)
-              </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Hello there! I'm Francisco Oliveira, a recent graduate in
-              Informatics Engineering from IPB (Instituto Politécnico de
-              Bragança). <br />Having earned my degree in 2022, I am now eagerly
-              seeking my first job opportunity in the tech industry. <br />
-              I am excited to apply my skills and contribute to innovative
-              projects.
-            </p>
-          </div>
-        </div>
-      </div>
+                  stroke-linejoin="round"
+                  class="lucide lucide-info-icon lucide-info">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 16v-4" />
+                  <path d="M12 8h.01" />
+                </svg>
+                <span>About me</span></a
+              >
+            </li>
 
-      <svg
-        class="icon arrow icon-fill"
-        onclick="location.href='./#exper'"
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 330 330"
-        xml:space="preserve">
-        <path
-          id="XMLID_24_"
-          d="M315,0H15C6.716,0,0,6.716,0,15v300c0,8.284,6.716,15,15,15h300c8.284,0,15-6.716,15-15V15
-	        C330,6.716,323.284,0,315,0z M255.606,135.606l-79.998,80c-2.813,2.813-6.628,4.394-10.606,4.394c-3.979,0-7.793-1.58-10.607-4.394
-	        l-80.002-80c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l69.396,69.393l69.392-69.393
-	        c5.857-5.858,15.355-5.858,21.213,0C261.465,120.251,261.465,129.749,255.606,135.606z" />
-      </svg>
-    </section>
-    <!--SKILLS SECTION-->
-    <section id="exper">
-      <p class="section__text__p1">Skills</p>
-      <h3 class="title">Digital Skills</h3>
-      <div class="collapsible">
-        <div class="collapsible-title">
-          <h3>
-            Programming Languages and Frameworks that I've had contact with
-          </h3>
-          <svg class="icon-stroke" width="15" height="10" viewBox="0 0 42 25">
-            <path d="M3 3L21 21L39 3" stroke-width="5" stroke-linecap="round" />
-          </svg>
+            <li class="nav__item">
+              <a href="#portfolio">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-folder-code-icon lucide-folder-code">
+                  <path d="M10 10.5 8 13l2 2.5" />
+                  <path d="m14 10.5 2 2.5-2 2.5" />
+                  <path
+                    d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z" />
+                </svg>
+                <span>Portfolio</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contact">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail-icon lucide-mail">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>Contact</span></a
+              >
+            </li>
+            <li class="nav__cv">
+              <a href="assets/CVFranciscoOliveira.pdf" download>CV</a>
+            </li>
+          </ul>
         </div>
-        <div class="collapsible-content">
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/HTML.svg"
-              class="icon" />
-            <div>
-              <h4>HTML</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/CSS.svg"
-              class="icon" />
-            <div>
-              <h4>CSS</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/JavaScript.svg"
-              class="icon" />
-            <div>
-              <h4>JavaScript</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://www.svgrepo.com/show/331760/sql-database-generic.svg"
-              class="icon" />
-            <div>
-              <h4>SQL</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/PHP-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>php</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Python-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>Python</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Java-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>Java</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/C.svg"
-              class="icon" />
-            <div>
-              <h4>C</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/CPP.svg"
-              class="icon" />
-            <div>
-              <h4>C++</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Bootstrap.svg"
-              class="icon" />
-            <div>
-              <h4>BootStrap</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/React-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>React</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Angular-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>Angular</h4>
-            </div>
-          </article>
-        </div>
-      </div>
+        <div id="close-page-btn" class="nav__btn nav__btn__close"></div>
+      </nav>
 
-      <div class="collapsible">
-        <div class="collapsible-title">
-          <h3>Database Management Systems that I've had contact with</h3>
-          <svg class="icon-stroke" width="15" height="10" viewBox="0 0 42 25">
-            <path d="M3 3L21 21L39 3" stroke-width="5" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="collapsible-content">
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/MySQL-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>MySQL</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://user-images.githubusercontent.com/4249331/52232852-e2c4f780-28bd-11e9-835d-1e3cf3e43888.png"
-              class="icon" />
-            <div>
-              <h4>Microsoft SQL Server</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://github.com/tandpfun/skill-icons/raw/main/icons/Firebase-Dark.svg"
-              class="icon" />
-            <div>
-              <h4>Firebase</h4>
-            </div>
-          </article>
-          <article>
-            <img
-              src="https://play-lh.googleusercontent.com/RC5WI7aIe9QcZv2rlR3fVeTlzg64n3mzmljAFJpsvVy8NeE2RcgjzlbzK4mjuqpezw"
-              class="icon" />
-            <div>
-              <h4>Oracle</h4>
-            </div>
-          </article>
-        </div>
-      </div>
-      <br />
-      <hr />
-      <svg
-        class="icon arrow icon-fill"
-        onclick="location.href='./#projects'"
-        fill="#000000"
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 330 330"
-        xml:space="preserve">
-        <path
-          id="XMLID_24_"
-          d="M315,0H15C6.716,0,0,6.716,0,15v300c0,8.284,6.716,15,15,15h300c8.284,0,15-6.716,15-15V15
-            C330,6.716,323.284,0,315,0z M255.606,135.606l-79.998,80c-2.813,2.813-6.628,4.394-10.606,4.394c-3.979,0-7.793-1.58-10.607-4.394
-            l-80.002-80c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l69.396,69.393l69.392-69.393
-            c5.857-5.858,15.355-5.858,21.213,0C261.465,120.251,261.465,129.749,255.606,135.606z" />
-      </svg>
-    </section>
-    <!--Projects-->
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Work</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="img/project_1.png"
-                alt="Project 1"
-                class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              RL3B Building, Lda Website
-            </h2>
-            <p>
-              - Designed and developed a responsive company website using
-              Angular <br />
-              - Integrated contact form and project gallery <br />
-              - Collaborated with client to gather requirements and provide
-              technical support
-            </p>
-            <div class="btn-container">
+      <!-- Hero Section -->
+
+      <section id="hero" class="section hero active">
+        <div class="flex-container hero">
+          <div class="flex__container__item hero__pic">
+            <img src="assets/hero.png" alt="" class="hero__pic heropic" />
+          </div>
+
+          <div class="flex__container__item hero__content">
+            <p class="hero__content__p">Hello there! &#128075; I'm</p>
+            <h1 class="hero__content__h1">
+              Francisco<span class="hero__content__h1-span">_</span>
+            </h1>
+            <br />
+            <p class="hero__content__p2">Junior Frontend Developer</p>
+            <div class="hero__content_btns">
               <a
-                href="https://rl3b.pt"
-                target="_blank"
-                rel="noopener noreferrer">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Live Website
+                href="https://linkedin.com/in/franciscojmoliveira"
+                class="btn-hero btn-hero--primary"
+                target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-linkedin-icon lucide-linkedin">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/sweetjezus"
+                class="btn-hero btn-hero--secondary"
+                target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-github-icon lucide-github">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                GitHub
               </a>
             </div>
           </div>
         </div>
-      </div>
-      <svg
-        class="icon arrow icon-fill"
-        onclick="location.href='./#contact'"
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 330 330"
-        xml:space="preserve">
-        <path
-          id="XMLID_24_"
-          d="M315,0H15C6.716,0,0,6.716,0,15v300c0,8.284,6.716,15,15,15h300c8.284,0,15-6.716,15-15V15
-	        C330,6.716,323.284,0,315,0z M255.606,135.606l-79.998,80c-2.813,2.813-6.628,4.394-10.606,4.394c-3.979,0-7.793-1.58-10.607-4.394
-	        l-80.002-80c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l69.396,69.393l69.392-69.393
-	        c5.857-5.858,15.355-5.858,21.213,0C261.465,120.251,261.465,129.749,255.606,135.606z" />
-      </svg>
-    </section>
-    <!--CONTACT SECTION-->
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <svg
-            class="icon contact-icon icon-fill"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" />
-            <path
-              d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" />
-            <path
-              d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" />
-          </svg>
+      </section>
 
-          <p>
-            <a href="https://www.linkedin.com/in/franciscojmoliveira/"
-              >@franciscojmoliveira</a
-            >
+      <section id="about" class="section about">
+        <div class="about__content">
+          <p class="about__intro">
+            Hi, I'm Francisco Oliveira. A Front-End Developer with a degree in
+            Computer Engineering, I build responsive websites using HTML, CSS
+            (SCSS), Angular, and React. Beyond front-end, I’ve explored back-end
+            deployment by setting up a project on AWS EC2 with RDS
+            (MySQL)—solidifying my understanding of how applications scale in
+            real environments.
           </p>
-        </div>
-        <div class="contact-info-container">
-          <svg
-            class="icon contact-icon icon-fill"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z" />
-          </svg>
-          <p>
-            <a href="mailto:francisco1998c@outlook.pt"
-              >francisco1998c@outlook.pt</a
-            >
-          </p>
-        </div>
-      </div>
-    </section>
-    <!--FOOTER-->
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#exper">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Francisco Oliveira. All Rights Reserved.</p>
-    </footer>
 
-    <script src="js/script.js"></script>
+          <div class="about__details">
+            <div id="stack" class="stack">
+              <div class="stack__content">
+                <div class="stack__group">
+                  <h3 class="stack__subtitle">Main Stack</h3>
+                  <ul class="stack__list">
+                    <li class="stack__item">HTML5</li>
+                    <li class="stack__item">CSS3 / SCSS</li>
+                    <li class="stack__item">JavaScript / TypeScript</li>
+                    <li class="stack__item">Angular</li>
+                    <li class="stack__item">React</li>
+                    <li class="stack__item">Git / GitHub</li>
+                    <li class="stack__item">MySQL</li>
+                    <li class="stack__item">Firebase (Firestore & Storage)</li>
+                    <li class="stack__item">AWS</li>
+                  </ul>
+                </div>
+                <div class="stack__group">
+                  <h3 class="stack__subtitle">College Stack</h3>
+                  <ul class="stack__list">
+                    <li class="stack__item">PHP</li>
+                    <li class="stack__item">Java</li>
+                    <li class="stack__item">Python</li>
+                    <li class="stack__item">C</li>
+                  </ul>
+                </div>
+                <div class="stack__group">
+                  <h3 class="stack__subtitle">Currently Exploring</h3>
+                  <ul class="stack__list">
+                    <li class="stack__item">Vue.Js</li>
+                    <li class="stack__item">Django</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="about__block">
+              <h3 class="about__subtitle">Education</h3>
+              <ul class="about__list">
+                <li class="about__item">
+                  Bachelor's Degree in Computer Engineering - Instituto
+                  Politécnico de Bragança
+                </li>
+              </ul>
+            </div>
+            <div class="about__block">
+              <h3 class="about__subtitle">Experience</h3>
+              <ul class="about__list">
+                <li class="about__item">
+                  RL3B Building as a Freelance (2025)– Full website development
+                  using Angular, HTML, CSS, TypeScript.
+                </li>
+                <li class="about__item">
+                  Local Backery (2023-2025) – Pastry preparation, bakery
+                  support, and cleaning tasks.
+                </li>
+                <li class="about__item">
+                  Italian Restaurant in Germany (2023)– Dishwashing and kitchen
+                  cleaning.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section">
+        <div id="stacked-projects" class="projects-grid flex-container"></div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2 class="contact__title">Let's Get in Touch</h2>
+        <form id="contact-form" class="contact__form">
+          <div class="contact__group">
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Your Name"
+              required />
+            <input
+              type="email"
+              name="reply_to"
+              placeholder="Your Email"
+              required />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required></textarea>
+          <button type="submit" class="btn-hero btn-hero--form">
+            Send Message
+          </button>
+
+          <span class="contact__status" id="contact-status"></span>
+        </form>
+        <p class="contact-alt">
+          Or just send me an email at
+          <a href="mailto:francisco1998c@outlook.pt"
+            >francisco1998c@outlook.pt</a
+          >
+        </p>
+      </section>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
